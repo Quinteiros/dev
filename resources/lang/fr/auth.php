@@ -16,5 +16,5 @@ return [
     'failed'   => 'Ces identifiants ne correspondent pas à nos enregistrements.',
     'password' => 'Le mot de passe saisi est incorrect.',
     'throttle' => 'Tentatives de connexion trop nombreuses. Veuillez essayer de nouveau dans :seconds secondes.',
-
+    'Email' => 'E-mail',
 ];
