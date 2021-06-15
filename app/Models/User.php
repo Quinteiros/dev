@@ -21,7 +21,7 @@ class User extends Authenticatable // implements MustVerifyEmail
     use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
-    use HasRoles;
+    use HasRoles; // Laravel/Permission
 
     /**
      * The attributes that are mass assignable.
