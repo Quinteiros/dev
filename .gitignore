@@ -26,5 +26,9 @@ yarn-error.log
 npm-debug.log
 # /node_modules
 
+# locked files
+composer.lock
+package-lock.json
+
 /.idea
 /.vscode
