@@ -24,7 +24,7 @@ npm-debug.log
 yarn-error.log
 /vendor/
 npm-debug.log
-#/node_modules
+node_modules
 
 # locked files
 composer.lock
