@@ -1,3 +1,15 @@
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
 /node_modules
 /public/hot
 /public/storage
@@ -11,5 +23,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/vendor/
+node_modules/
+npm-debug.log
+
 /.idea
 /.vscode
