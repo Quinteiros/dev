@@ -2,12 +2,13 @@
 
 @section('header')
     @if(isset($headerImage) && !is_null($headerImage))
-        @includeIf('theme::partials.backend-header')
+        @component('theme::defaults.backend-header')@endcomponent
     @endif
 @endsection
 
 @section('content')
     @parent
+    @component('theme::defaults.entries-table')@endcomponent
 @endsection
 
 @push('top-scripts')

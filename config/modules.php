@@ -49,6 +49,10 @@ return [
             'components/partials/section-header' => 'Resources/views/partials/section-header.blade.php',
             'components/partials/entries-grid' => 'Resources/views/partials/entries-grid.blade.php',
 
+            // Default resource migrations and model
+            'migration/create' => 'Database/Migrations/9999_12_12_create_resources_table.php',
+            'model' => 'Entities/Resource.php',
+
             'scaffold/config' => 'Config/config.php',
 
             'composer' => 'composer.json',
@@ -72,6 +76,7 @@ return [
             'views/backend' => ['LOWER_NAME', 'STUDLY_NAME'],
             'views/backend/index' => ['LOWER_NAME', 'STUDLY_NAME'],
             'scaffold/config' => ['STUDLY_NAME'],
+            'model' => ['CLASS'],
             'composer' => [
                 'LOWER_NAME',
                 'STUDLY_NAME',
