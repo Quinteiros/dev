@@ -30,18 +30,33 @@ return [
         'files' => [
             'routes/web' => 'Routes/web.php',
             'routes/api' => 'Routes/api.php',
+            
             'views/index' => 'Resources/views/index.blade.php',
+            
+            // Frontend views and folders
             'views/master' => 'Resources/views/layouts/master.blade.php',
+            'views/master/index' => 'Resources/views/master/index.blade.php',
+            
+            // Setup views and folders
             'views/setup' => 'Resources/views/layouts/setup.blade.php',
+            'views/setup/index' => 'Resources/views/setup/index.blade.php',
+            
+            // Backend views and folders
             'views/backend' => 'Resources/views/layouts/backend.blade.php',
-            'scaffold/config' => 'Config/config.php',
+            'views/backend/index' => 'Resources/views/backend/index.blade.php',
+
+            // Default partials for each module
             'components/partials/section-header' => 'Resources/views/partials/section-header.blade.php',
+
+            'scaffold/config' => 'Config/config.php',
+
             'composer' => 'composer.json',
             'assets/js/app' => 'Resources/assets/js/app.js',
             'assets/sass/app' => 'Resources/assets/sass/app.scss',
             'webpack' => 'webpack.mix.js',
             'package' => 'package.json',
         ],
+
         'replacements' => [
             'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
             'routes/api' => ['LOWER_NAME'],
@@ -50,8 +65,11 @@ return [
             'views/index' => ['LOWER_NAME'],
             'components/partials/section-header' => ['LOWER_NAME', 'STUDLY_NAME'], 
             'views/master' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/master/index' => ['LOWER_NAME', 'STUDLY_NAME'],
             'views/setup' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/setup/index' => ['LOWER_NAME', 'STUDLY_NAME'],
             'views/backend' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/backend/index' => ['LOWER_NAME', 'STUDLY_NAME'],
             'scaffold/config' => ['STUDLY_NAME'],
             'composer' => [
                 'LOWER_NAME',
