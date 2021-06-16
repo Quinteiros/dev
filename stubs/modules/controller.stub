@@ -1,0 +1,82 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
+class $CLASS$ extends Controller
+{
+
+    /**
+     * Display a listing of the resource.
+     * @return Renderable
+     */
+    public function index()
+    {
+        return view('$LOWER_NAME$::index');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     * @return Renderable
+     */
+    public function create()
+    {
+        return view('$LOWER_NAME$::create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     * @param Request $request
+     * @return Renderable
+     */
+    public function store(Request $request, $$LOWER_NAME$)
+    {
+        //
+    }
+
+    /**
+     * Show the specified resource.
+     * @param \$$STUDLY_NAME$ $$LOWER_NAME$
+     * @return Renderable
+     */
+    public function show(\$STUDLY_NAME$ $$LOWER_NAME$)
+    {
+        return view('$LOWER_NAME$::show');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     * @param \$$STUDLY_NAME$ $$LOWER_NAME$
+     * @return Renderable
+     */
+    public function edit(\$STUDLY_NAME$ $$LOWER_NAME$)
+    {
+        return view('$LOWER_NAME$::edit');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     * @param Request $request
+     * @param int $$LOWER_NAME$
+     * @return Renderable
+     */
+    public function update(Request $request, $$LOWER_NAME$)
+    {
+        \$STUDLY_NAME$::find($$LOWER_NAME$);
+        $$LOWER_NAME$->update($request->all());
+        return redirect()->route('show.$LOWER_NAME$s', $$LOWER_NAME$);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     * @param $$LOWER_NAME$
+     * @return Renderable
+     */
+    public function destroy($$LOWER_NAME$)
+    {
+        //
+    }
+}

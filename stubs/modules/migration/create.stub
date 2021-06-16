@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class $CLASS$ extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('$TABLE$', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->longText('title');
+            $table->longText('lead');
+            $table->longText('body');
+            $table->longText('name');
+            $table->longText('description');
+            $table->foreignId('user_id')->references('id')->on('people')->nullable()->default('1');
+$FIELDS$
+            $table->nullableTimestamps();
+            $table->softDeletes();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('$TABLE$');
+    }
+}

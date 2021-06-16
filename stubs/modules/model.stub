@@ -1,0 +1,50 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\Translatable\HasTranslations;
+use Spatie\Image\Manipulations;
+use Illuminate\Database\Eloquent\SoftDeletes as SoftDeletes;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
+/*** 
+    use Illuminate\Foundation\Auth\User as Authenticatable;
+    use Spatie\Permission\Traits\HasRoles;
+**/
+
+class $CLASS$ extends Model implements HasMedia
+{
+    use HasTranslations;
+    use InteractsWithMedia;
+    use HasFactory;
+    use SoftDeletes;
+
+    protected $table = [''];
+    protected $fillable = $FILLABLE$;
+    protected $translatable = $FILLABLE$;
+
+    protected static function newFactory()
+    {
+        return \$MODULE_NAMESPACE$\$MODULE$\Database\factories\$NAME$Factory::new();
+    }
+    
+    /***
+    public function registerMediaCollections() : void
+    {
+        $this->addMediaCollection('slugified-table-name');
+        // ->useFallbackUrl('/images/undefined-specy.jpg')
+        // ->useFallbackPath(public_path('/images/undefined-specy.jpg'));
+    }
+    **/
+
+    public function user()
+    {
+        return $this->belongsTo(Modules\Core\Entities\Person::class);
+    }
+    
+}
