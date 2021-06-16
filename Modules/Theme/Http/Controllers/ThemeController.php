@@ -79,14 +79,23 @@ class ThemeController extends Controller
     {
         //
     }
-    
+
+    /**
+     * Display a listing of the resource.
+     * @return Renderable
+     */
+    public function frontend()
+    {
+        return view('theme::master.index');
+    } 
+
     /**
      * Display a listing of the resource.
      * @return Renderable
      */
     public function backend()
     {
-        return view('theme::backend');
+        return view('theme::backend.index');
     } 
 
     /**
@@ -95,6 +104,6 @@ class ThemeController extends Controller
      */
     public function setup()
     {
-        return view('theme::setup');
+        return view('theme::setup.index');
     } 
 }

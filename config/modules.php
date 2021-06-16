@@ -47,6 +47,7 @@ return [
 
             // Default partials for each module
             'components/partials/section-header' => 'Resources/views/partials/section-header.blade.php',
+            'components/partials/entries-grid' => 'Resources/views/partials/entries-grid.blade.php',
 
             'scaffold/config' => 'Config/config.php',
 

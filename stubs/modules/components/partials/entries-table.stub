@@ -1,0 +1,13 @@
+<table class="entries-table">
+    @forelse($entries as $entry)
+        <tr class="table-row">
+            <td class="table-cell">{{ $entry }}</td>
+        </tr>
+    @empty
+        <tr class="table-row">
+            <td class="table-cell">
+                @includeIf('theme::defaults.table-empty')
+            </td>
+        </tr>
+    @endforelse
+</table>

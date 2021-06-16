@@ -79,14 +79,23 @@ class $CLASS$ extends Controller
     {
         //
     }
-    
+
+    /**
+     * Display a listing of the resource.
+     * @return Renderable
+     */
+    public function frontend()
+    {
+        return view('$LOWER_NAME$::master.index');
+    } 
+
     /**
      * Display a listing of the resource.
      * @return Renderable
      */
     public function backend()
     {
-        return view('$LOWER_NAME$::backend');
+        return view('$LOWER_NAME$::backend.index');
     } 
 
     /**
@@ -95,6 +104,6 @@ class $CLASS$ extends Controller
      */
     public function setup()
     {
-        return view('$LOWER_NAME$::setup');
+        return view('$LOWER_NAME$::setup.index');
     } 
 }
