@@ -2,7 +2,7 @@
 
 @section('header')
     @if(isset($headerImage) && !is_null($headerImage))
-        @includeIf('$LOWER_NAME$::partials.section-header', [$headerImage' => $headerImage])
+        @includeIf('$LOWER_NAME$::partials.section-header', ['headerImage' => $headerImage])
         @else 
         @includeIf('theme::partials.default-header')
     @endif
