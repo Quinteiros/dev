@@ -11,12 +11,12 @@
 @section('content')
     @parent
     @if(isset($pageData) && !is_null($pageData))
-            @component('theme::layouts.components.page-data', ['pageData' => $pageData])@endcomponent
+            @component('cms::page-data', ['pageData' => $pageData])@endcomponent
         @else 
-            @component('theme::layouts.components.page-data')@endcomponent
+            @component('cms::page-data')@endcomponent
     @endif
     @if(isset($entries) && !is_null($entries)))
-        @component('theme::layouts.components.grid', ['entries' => $entries])@endcomponent
+        @component('theme::components.grid', ['entries' => $entries])@endcomponent
     @endif
 @endsection
 
