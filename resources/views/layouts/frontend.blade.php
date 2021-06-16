@@ -26,7 +26,7 @@
             @includeIf('theme::fastbar')
         @endif
         @if(! \Request::is('/'))
-            @component('theme::breadcrumbs')
+            @includeIf('theme::breadcrumbs')
         @endif
         <div class="relative mx-auto max-w-7xl px-auto">
             @includeIf('flash::message')

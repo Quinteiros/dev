@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller;
 
 class ThemeController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      * @return Renderable
@@ -31,27 +32,27 @@ class ThemeController extends Controller
      * @param Request $request
      * @return Renderable
      */
-    public function store(Request $request)
+    public function store(Request $request, $theme)
     {
         //
     }
 
     /**
      * Show the specified resource.
-     * @param int $id
+     * @param \$Theme $theme
      * @return Renderable
      */
-    public function show($id)
+    public function show(\Theme $theme)
     {
         return view('theme::show');
     }
 
     /**
      * Show the form for editing the specified resource.
-     * @param int $id
+     * @param \$Theme $theme
      * @return Renderable
      */
-    public function edit($id)
+    public function edit(\Theme $theme)
     {
         return view('theme::edit');
     }
@@ -59,20 +60,22 @@ class ThemeController extends Controller
     /**
      * Update the specified resource in storage.
      * @param Request $request
-     * @param int $id
+     * @param int $theme
      * @return Renderable
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $theme)
     {
-        //
+        \Theme::find($theme);
+        $theme->update($request->all());
+        return redirect()->route('show.themes', $theme);
     }
 
     /**
      * Remove the specified resource from storage.
-     * @param int $id
+     * @param $theme
      * @return Renderable
      */
-    public function destroy($id)
+    public function destroy($theme)
     {
         //
     }
