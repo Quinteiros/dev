@@ -1,7 +1,7 @@
 @extends('layouts.backend')
 
 @section('header')
-    @if(isset($headerImage) && !is_null($headerImage)))
+    @if(isset($headerImage) && !is_null($headerImage))
         @includeIf('theme::partials.backend-header')
     @endif
 @endsection

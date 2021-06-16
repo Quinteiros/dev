@@ -1,7 +1,7 @@
 @extends('theme::layouts.master')
 
 @section('header')
-    @if(isset($headerImage) && !is_null($headerImage)))
+    @if(isset($headerImage) && !is_null($headerImage))
         @includeIf('theme::partials.section-header', [$headerImage' => $headerImage])
         @else 
         @includeIf('theme::partials.default-header')

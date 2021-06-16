@@ -1,7 +1,7 @@
 @extends('layouts.setup')
 
 @section('header')
-    @if(isset($headerImage) && !is_null($headerImage)))
+    @if(isset($headerImage) && !is_null($headerImage))
         @includeIf('theme::partials.setup-header')
     @endif
 @endsection
