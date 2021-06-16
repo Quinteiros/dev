@@ -15,7 +15,8 @@ class ThemeController extends Controller
      */
     public function index()
     {
-        return view('theme::index');
+        $headerImage = "default-header-image";
+        return view('theme::index', ['headerImage' => $headerImage]);
     }
 
     /**
