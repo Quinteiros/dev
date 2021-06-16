@@ -79,4 +79,22 @@ class ThemeController extends Controller
     {
         //
     }
+    
+    /**
+     * Display a listing of the resource.
+     * @return Renderable
+     */
+    public function backend()
+    {
+        return view('theme::backend');
+    } 
+
+    /**
+     * Display a listing of the resource.
+     * @return Renderable
+     */
+    public function setup()
+    {
+        return view('theme::setup');
+    } 
 }

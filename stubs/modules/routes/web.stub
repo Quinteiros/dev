@@ -31,7 +31,7 @@ Route::group(['middleware' => ['language']], function () {
         | Routes for the module's administrators 
         |
         */
-        Route::group(['middleware' => ['auth:sanctum', 'role:admin']], function () {
+        Route::group(['middleware' => ['auth:sanctum', 'verified', 'role:admin']], function () {
 
             Route::prefix('backend')->group(function() {
                 
@@ -50,7 +50,7 @@ Route::group(['middleware' => ['language']], function () {
         | Routes for the module's superadministrator 
         |
         */        
-        Route::group(['middleware' => ['auth:sanctum', 'role:admin']], function () {
+        Route::group(['middleware' => ['auth:sanctum', 'verified', 'role:admin']], function () {
 
             Route::prefix('setup')->group(function() {
                 

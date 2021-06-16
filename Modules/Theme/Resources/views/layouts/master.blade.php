@@ -1,15 +1,15 @@
 @extends('layouts.frontend')
 
-@push('top-scripts')
-@endpush
-
 @section('meta')
-    @component('core::layouts.components.metadata')
+    @includeIf('cms::meta-data')
 @endsection
 
 @hasSection('breadcrumbs')
-    BREADCRUMBS
+    @includeIf('theme::breadcrumbs')
 @endif
+
+@push('top-scripts')
+@endpush
 
 @push('bottom-scripts')
 @endpush

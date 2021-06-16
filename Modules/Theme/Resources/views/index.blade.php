@@ -2,21 +2,21 @@
 
 @section('header')
     @if(isset($headerImage) && !is_null($headerImage)))
-        @component('theme::layouts.components.section-header', ['headerImage' => $headerImage])@endcomponent
+        @includeIf('theme::partials.section-header', [$headerImage' => $headerImage])
         @else 
-        @component('theme::layouts.components.section-header')@endcomponent
+        @includeIf('theme::partials.default-header')
     @endif
 @endsection
 
 @section('content')
     @parent
     @if(isset($pageData) && !is_null($pageData))
-            @component('cms::page-data', ['pageData' => $pageData])@endcomponent
+            @includeIf('cms::page-data', ['pageData' => $pageData])
         @else 
-            @component('cms::page-data')@endcomponent
+            @includeIf('cms::page-data')
     @endif
     @if(isset($entries) && !is_null($entries)))
-        @component('theme::components.grid', ['entries' => $entries])@endcomponent
+        @includeIf('theme::components.default-grid', ['entries' => $entries])
     @endif
 @endsection
 

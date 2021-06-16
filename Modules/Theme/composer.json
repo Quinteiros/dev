@@ -1,10 +1,11 @@
 {
-    "name": "nwidart/theme",
-    "description": "",
+    "name": "podging/theme",
+    "description": "This module has initially been generated with nWidart/laravel-modules.",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "credentials": "Nicolas Widart (Laravel Modules' Founder)",
+            "name": "Stephane Maissin",
+            "email": "stephane.maissin@gmail.com"
         }
     ],
     "extra": {

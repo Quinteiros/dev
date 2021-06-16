@@ -2,9 +2,9 @@
 
 @section('header')
     @if(isset($headerImage) && !is_null($headerImage)))
-        @includeIf('$LOWER_NAME$::section-header', [$headerImage' => $headerImage])
+        @includeIf('$LOWER_NAME$::partials.section-header', [$headerImage' => $headerImage])
         @else 
-        @includeIf('theme::default-header')
+        @includeIf('theme::partials.default-header')
     @endif
 @endsection
 
@@ -16,7 +16,7 @@
             @includeIf('cms::page-data')
     @endif
     @if(isset($entries) && !is_null($entries)))
-        @includeIf('theme::grid', ['entries' => $entries])
+        @includeIf('theme::components.default-grid', ['entries' => $entries])
     @endif
 @endsection
 

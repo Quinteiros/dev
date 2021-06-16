@@ -79,4 +79,22 @@ class $CLASS$ extends Controller
     {
         //
     }
+    
+    /**
+     * Display a listing of the resource.
+     * @return Renderable
+     */
+    public function backend()
+    {
+        return view('$LOWER_NAME$::backend');
+    } 
+
+    /**
+     * Display a listing of the resource.
+     * @return Renderable
+     */
+    public function setup()
+    {
+        return view('$LOWER_NAME$::setup');
+    } 
 }

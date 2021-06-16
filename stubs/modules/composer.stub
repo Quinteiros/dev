@@ -1,10 +1,11 @@
 {
-    "name": "$VENDOR$/$LOWER_NAME$",
-    "description": "",
+    "name": "podging/$LOWER_NAME$",
+    "description": "This module has initially been generated with nWidart/laravel-modules.",
     "authors": [
         {
-            "name": "$AUTHOR_NAME$",
-            "email": "$AUTHOR_EMAIL$"
+            "credentials": "Nicolas Widart (Laravel Modules' Founder)",
+            "name": "Stephane Maissin",
+            "email": "stephane.maissin@gmail.com"
         }
     ],
     "extra": {
