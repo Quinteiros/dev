@@ -29,6 +29,8 @@ return [
         'path' => base_path() . '/stubs/modules',
         'files' => [
             'routes/web' => 'Routes/web.php',
+            'routes/backend' => 'Routes/backend.php',
+            'routes/setup' => 'Routes/setup.php',
             'routes/api' => 'Routes/api.php',
             
             'views/index' => 'Resources/views/index.blade.php',
@@ -36,22 +38,23 @@ return [
             // Frontend views and folders
             'views/master' => 'Resources/views/layouts/master.blade.php',
             'views/master/index' => 'Resources/views/master/index.blade.php',
-            
-            // Setup views and folders
-            'views/setup' => 'Resources/views/layouts/setup.blade.php',
-            'views/setup/index' => 'Resources/views/setup/index.blade.php',
+            'views/master/show' => 'Resources/views/master/show.blade.php',
+            'views/master/create' => 'Resources/views/master/create.blade.php',
             
             // Backend views and folders
             'views/backend' => 'Resources/views/layouts/backend.blade.php',
             'views/backend/index' => 'Resources/views/backend/index.blade.php',
+            'views/backend/destroy' => 'Resources/views/backend/destroy.blade.php',
+            'views/backend/edit' => 'Resources/views/backend/edit.blade.php',
 
+            // Setup views and folders
+            'views/setup' => 'Resources/views/layouts/setup.blade.php',
+            'views/setup/index' => 'Resources/views/setup/index.blade.php',
+            'views/setup/edit' => 'Resources/views/setup/edit.blade.php',
+            
             // Default partials for each module
             'components/partials/section-header' => 'Resources/views/partials/section-header.blade.php',
             'components/partials/entries-grid' => 'Resources/views/partials/entries-grid.blade.php',
-
-            // Default resource migrations and model
-            'migration/create' => 'Database/Migrations/9999_12_12_create_resources_table.php',
-            'model' => 'Entities/Resource.php',
 
             'scaffold/config' => 'Config/config.php',
 
@@ -64,6 +67,8 @@ return [
 
         'replacements' => [
             'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'routes/backend' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'routes/setup' => ['LOWER_NAME', 'STUDLY_NAME'],
             'routes/api' => ['LOWER_NAME'],
             'webpack' => ['LOWER_NAME'],
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE', 'PROVIDER_NAMESPACE'],
@@ -71,12 +76,17 @@ return [
             'components/partials/section-header' => ['LOWER_NAME', 'STUDLY_NAME'], 
             'views/master' => ['LOWER_NAME', 'STUDLY_NAME'],
             'views/master/index' => ['LOWER_NAME', 'STUDLY_NAME'],
-            'views/setup' => ['LOWER_NAME', 'STUDLY_NAME'],
-            'views/setup/index' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/master/show' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/master/create' => ['LOWER_NAME', 'STUDLY_NAME'],
             'views/backend' => ['LOWER_NAME', 'STUDLY_NAME'],
             'views/backend/index' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/backend/edit' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/backend/destroy' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/setup' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/setup/index' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'views/setup/edit' => ['LOWER_NAME', 'STUDLY_NAME'],
+            
             'scaffold/config' => ['STUDLY_NAME'],
-            'model' => ['CLASS'],
             'composer' => [
                 'LOWER_NAME',
                 'STUDLY_NAME',
@@ -240,14 +250,14 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nwidart',
+        'vendor' => 'heliagora',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => 'Heliagora',
+            'email' => 'heliagora@gmail.com',
         ],
     ],
 
-    'composer-output' => false,
+    'composer-output' => true,
 
     /*
     |--------------------------------------------------------------------------

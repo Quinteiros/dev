@@ -36,6 +36,10 @@ class $CLASS$ extends ServiceProvider
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
+
+        $this->mapSetupRoutes();
+
+        $this->mapBackendRoutes();
     }
 
     /**
@@ -66,4 +70,33 @@ class $CLASS$ extends ServiceProvider
             ->namespace($this->moduleNamespace)
             ->group(module_path('$MODULE$', '$API_ROUTES_PATH$'));
     }
+
+    /**
+     * Define the "backend" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapBackendRoutes()
+    {
+        Route::middleware('backend')
+            ->namespace($this->moduleNamespace)
+            ->group(module_path('$MODULE$', '/Routes/backend.php'));
+    }
+
+    /**
+     * Define the "setup" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapSetupRoutes()
+    {
+        Route::middleware('setup')
+            ->namespace($this->moduleNamespace)
+            ->group(module_path('$MODULE$', '/Routes/setup.php'));
+    }
+
 }

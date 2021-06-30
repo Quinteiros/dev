@@ -1,0 +1,35 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Backend Routes
+|--------------------------------------------------------------------------
+|
+| Routes for the "$STUDLY_NAME$" module
+|
+*/
+
+Route::group(['middleware' => ['language']], function () {
+    
+    Route::prefix('$LOWER_NAME$')->group(function() {
+
+        /*
+        |--------------------------------------------------------------------------
+        | $STUDLY_NAME$ BACKEND ROUTES
+        |--------------------------------------------------------------------------
+        |
+        | Routes for the module's administrators 
+        |
+        */
+        Route::group(['middleware' => ['auth:sanctum', 'verified', 'role:backend']], function () {
+
+            Route::prefix('backend')->group(function() {
+                
+                Route::get('/', '$STUDLY_NAME$Controller@backend');
+            
+            });
+
+        });
+
+    });
+});

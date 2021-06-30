@@ -25,7 +25,7 @@ Route::group(['middleware' => ['language']], function () {
 
         /*
         |--------------------------------------------------------------------------
-        | $STUDLY_NAME$ MASTER ROUTES
+        | $STUDLY_NAME$ Frontend ROUTES
         |--------------------------------------------------------------------------
         |
         | Routes for the module's authed, registered ... user 
@@ -33,46 +33,9 @@ Route::group(['middleware' => ['language']], function () {
         */
         Route::group(['middleware' => ['auth:sanctum', 'verified', 'role:frontend']], function () {
 
-            Route::prefix('backend')->group(function() {
+            Route::prefix('frontend')->group(function() {
                 
                 Route::get('/', '$STUDLY_NAME$Controller@frontend');
-            
-            });
-
-        });
-
-        /*
-        |--------------------------------------------------------------------------
-        | $STUDLY_NAME$ BACKEND ROUTES
-        |--------------------------------------------------------------------------
-        |
-        | Routes for the module's administrators 
-        |
-        */
-        Route::group(['middleware' => ['auth:sanctum', 'verified', 'role:backend']], function () {
-
-            Route::prefix('backend')->group(function() {
-                
-                Route::get('/', '$STUDLY_NAME$Controller@backend');
-            
-            });
-
-        });
-
-
-        /*
-        |--------------------------------------------------------------------------
-        | $STUDLY_NAME$ CONFIGURATION / SETUP ROUTES
-        |--------------------------------------------------------------------------
-        |
-        | Routes for the module's superadministrator 
-        |
-        */        
-        Route::group(['middleware' => ['auth:sanctum', 'verified', 'role:admin']], function () {
-
-            Route::prefix('setup')->group(function() {
-                
-                Route::get('/', '$STUDLY_NAME$Controller@setup');
             
             });
 

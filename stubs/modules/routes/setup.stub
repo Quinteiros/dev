@@ -1,0 +1,34 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Setup Routes
+|--------------------------------------------------------------------------
+|
+| Routes for the "$STUDLY_NAME$" module
+|
+*/
+
+Route::group(['middleware' => ['language']], function () {
+    
+    Route::prefix('$LOWER_NAME$')->group(function() {
+        /*
+        |--------------------------------------------------------------------------
+        | $STUDLY_NAME$ CONFIGURATION / SETUP ROUTES
+        |--------------------------------------------------------------------------
+        |
+        | Routes for the module's superadministrator 
+        |
+        */        
+        Route::group(['middleware' => ['auth:sanctum', 'verified', 'role:admin']], function () {
+
+            Route::prefix('setup')->group(function() {
+                
+                Route::get('/', '$STUDLY_NAME$Controller@setup');
+            
+            });
+
+        });
+
+    });
+});

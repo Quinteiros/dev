@@ -44,7 +44,12 @@ class $CLASS$ extends Model implements HasMedia
 
     public function user()
     {
-        return $this->belongsTo(Modules\Core\Entities\Person::class);
+        return $this->belongsTo(App\Models\User::class);
     }
     
+    public function member()
+    {
+        return $this->belongsTo(Modules\Members\Entities\Member::class);
+    }
+
 }

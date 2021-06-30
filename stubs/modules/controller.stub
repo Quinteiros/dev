@@ -101,7 +101,7 @@ class $CLASS$ extends Controller
      */
     public function update(Request $request, $STUDLY_NAME$ $$LOWER_NAME$)
     {
-        $LOWER_NAME$->update;
+        $$LOWER_NAME$->update;
     }
 
     /**
@@ -112,7 +112,7 @@ class $CLASS$ extends Controller
      */
     public function destroy($STUDLY_NAME$ $$LOWER_NAME$)
     {
-        return this->index();
+        return $this->index();
     }
 
     /**
