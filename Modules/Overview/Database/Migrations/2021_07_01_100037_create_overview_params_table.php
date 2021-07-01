@@ -17,9 +17,6 @@ class CreateOverviewParamsTable extends Migration
             $table->bigIncrements('id');
             
             $table->uuid('module_license')->nullable()->default(NULL);
-            $table->foreignId('user_id')->references('id')->on('people')->nullable()->default(NULL);
-            $table->foreignId('backend_id')->references('id')->on('people')->nullable()->default(NULL);
-            $table->foreignId('admin_id')->references('id')->on('people')->nullable()->default(NULL);
             
             $table->longText('name');
             
