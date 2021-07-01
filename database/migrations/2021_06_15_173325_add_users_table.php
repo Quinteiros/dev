@@ -4,6 +4,10 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+// In order to seed Roles 
+use \Spatie\Permission\Models\Role as Role;
+use \Spatie\Permission\Models\Permission as Permission;
+
 class AddUsersTable extends Migration
 {
     /**
