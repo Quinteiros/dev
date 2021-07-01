@@ -5,6 +5,7 @@ namespace Modules\Overview\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use \Modules\Overview\Entities\OverviewParam;
 
 class OverviewController extends Controller
 {
