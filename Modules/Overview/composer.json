@@ -1,0 +1,24 @@
+{
+    "name": "podging/overview",
+    "description": "This module has initially been generated with nWidart/laravel-modules.",
+    "authors": [
+        {
+            "credentials": "Nicolas Widart (Laravel Modules' Founder)",
+            "name": "Stephane Maissin",
+            "email": "stephane.maissin@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Overview\\": ""
+        }
+    }
+}
