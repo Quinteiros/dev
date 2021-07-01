@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateModOverviewParametersTable extends Migration
+class CreateOverviewParamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,7 @@ class CreateModOverviewParametersTable extends Migration
      */
     public function up()
     {
-        Schema::create('mod_overview_parameters', function (Blueprint $table) {
-            
+        Schema::create('overview_params', function (Blueprint $table) {
             $table->bigIncrements('id');
             
             $table->uuid('module_license')->nullable()->default(NULL);
@@ -55,6 +54,6 @@ class CreateModOverviewParametersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mod_overview_parameters');
+        Schema::dropIfExists('overview_params');
     }
 }

@@ -15,7 +15,7 @@ class OverviewController extends Controller
      */
     public function index()
     {
-        return view('overview::index', ['$overviews' => \Overview::withTrashed()->get()]);
+        return view('overview::index', ['overviewParams' => \OverviewParam::withTrashed()->get()]);
     }
 
     /**
