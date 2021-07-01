@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
     
-class AddOverviewUsers extends Migration 
+class AddOverviewUsersTable extends Migration 
 {
     /**
      * Run the migrations.
